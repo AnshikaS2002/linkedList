@@ -7,5 +7,7 @@ public interface LinkedList<T> {
 
     void deleteFirst();
 
+    void deleteLast();
+
     void display();
 }

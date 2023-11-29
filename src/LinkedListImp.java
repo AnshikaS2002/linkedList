@@ -42,9 +42,29 @@ public class LinkedListImp<T> implements LinkedList<T> {
     }
 
     public void deleteFirst() {
-        if (head == null) 
+        if (head == null)
             return;
         head = head.next;
+    }
+
+    public void deleteLast() {
+        if (head == null)
+            return;
+        
+        if(head.next == null) {
+            head = null;
+            return;
+        }
+
+        Node<T> prev = head;
+        Node<T> cur = head.next;
+
+        while (cur.next != null) {
+            prev = cur;
+            cur = cur.next;
+        }
+
+        prev.next = null;
     }
 
     public void display() {
@@ -53,5 +73,6 @@ public class LinkedListImp<T> implements LinkedList<T> {
             System.out.print(" " + cur.data);
             cur = cur.next;
         }
+        System.out.println("");
     }
 }

@@ -12,5 +12,7 @@ public class LinkedListMain {
         integerList.insertElement(45, 0);
         integerList.deleteFirst();
         integerList.display();
+        integerList.deleteLast();
+        integerList.display();
     }
 }
