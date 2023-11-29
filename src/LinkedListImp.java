@@ -90,6 +90,22 @@ public class LinkedListImp<T> implements LinkedList<T> {
         }
     }
 
+    public void deleteElement(T data) {
+        int pos = findElement(data);
+        Node<T> curNode = head;
+        if (pos == -1) {
+            System.out.println("data does not exist");
+            return;
+        } else if(pos == 0) {
+            head = head.next;
+        } else {
+            for (int prev = 0; prev < pos - 1; prev++) {
+                curNode = curNode.next;
+            }
+            curNode.next = curNode.next.next;
+        }
+    }
+
     public void display() {
         Node<T> cur = head;
         while (cur != null) {

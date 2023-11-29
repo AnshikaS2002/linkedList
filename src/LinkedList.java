@@ -13,5 +13,7 @@ public interface LinkedList<T> {
 
     void searchAndInsert(T data1, T data2);
 
+    void deleteElement(T data);
+
     void display();
 }
