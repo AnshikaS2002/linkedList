@@ -10,11 +10,17 @@ public class LinkedListMain {
         integerList.addRear(30);
 
         integerList.insertElement(45, 0);
+
         integerList.deleteFirst();
         integerList.display();
+
         integerList.deleteLast();
         integerList.display();
+
         System.out.println(integerList.findElement(30));
+
+        integerList.searchAndInsert(31, 75);
+        integerList.display();
 
     }
 }

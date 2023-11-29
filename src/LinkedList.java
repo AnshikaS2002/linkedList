@@ -11,5 +11,7 @@ public interface LinkedList<T> {
 
     int findElement(T data);
 
+    void searchAndInsert(T data1, T data2);
+
     void display();
 }

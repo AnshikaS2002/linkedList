@@ -71,13 +71,23 @@ public class LinkedListImp<T> implements LinkedList<T> {
         int pos = 0;
         Node<T> cur = head;
 
-        while (cur.next != null) {
+        while (cur != null) {
             if (cur.data.equals(data))
                 return pos;
             pos++;
             cur = cur.next;
         }
         return -1;
+    }
+
+    public void searchAndInsert(T data1, T data2) {
+        int pos = findElement(data1);
+        if (pos == -1) {
+            System.out.println("Invalid key");
+            return;
+        } else {
+            insertElement(data2, pos + 1);
+        }
     }
 
     public void display() {
