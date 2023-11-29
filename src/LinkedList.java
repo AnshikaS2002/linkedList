@@ -3,5 +3,7 @@ public interface LinkedList<T> {
 
     void addRear(T data);
 
+    void insertElement(T data, int pos);
+
     void display();
 }

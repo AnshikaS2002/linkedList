@@ -17,13 +17,28 @@ public class LinkedListImp<T> implements LinkedList<T> {
             head = newNode;
         } else {
             Node<T> curNode = head;
-            while(curNode.next != null) {
-                 curNode = curNode.next;
+            while (curNode.next != null) {
+                curNode = curNode.next;
             }
             curNode.next = newNode;
         }
+    }
 
-        
+    public void insertElement(T data, int pos) {
+        if(pos == 0) {
+            addFront(data);
+            return;
+        }
+
+        Node<T> newNode = new Node(data);
+        Node<T> curNode = head;
+
+        for (int prev = 0; prev < pos - 1; prev++) {
+            curNode = curNode.next;
+        }
+
+        newNode.next = curNode.next;
+        curNode.next = newNode;
     }
 
     public void display() {
