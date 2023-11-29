@@ -50,8 +50,8 @@ public class LinkedListImp<T> implements LinkedList<T> {
     public void deleteLast() {
         if (head == null)
             return;
-        
-        if(head.next == null) {
+
+        if (head.next == null) {
             head = null;
             return;
         }
@@ -65,6 +65,19 @@ public class LinkedListImp<T> implements LinkedList<T> {
         }
 
         prev.next = null;
+    }
+
+    public int findElement(T data) {
+        int pos = 0;
+        Node<T> cur = head;
+
+        while (cur.next != null) {
+            if (cur.data.equals(data))
+                return pos;
+            pos++;
+            cur = cur.next;
+        }
+        return -1;
     }
 
     public void display() {

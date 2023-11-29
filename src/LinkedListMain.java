@@ -14,5 +14,7 @@ public class LinkedListMain {
         integerList.display();
         integerList.deleteLast();
         integerList.display();
+        System.out.println(integerList.findElement(30));
+
     }
 }

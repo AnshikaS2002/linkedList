@@ -9,5 +9,7 @@ public interface LinkedList<T> {
 
     void deleteLast();
 
+    int findElement(T data);
+
     void display();
 }
