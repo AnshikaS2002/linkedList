@@ -5,5 +5,7 @@ public interface LinkedList<T> {
 
     void insertElement(T data, int pos);
 
+    void deleteFirst();
+
     void display();
 }

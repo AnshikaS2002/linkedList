@@ -25,7 +25,7 @@ public class LinkedListImp<T> implements LinkedList<T> {
     }
 
     public void insertElement(T data, int pos) {
-        if(pos == 0) {
+        if (pos == 0) {
             addFront(data);
             return;
         }
@@ -39,6 +39,12 @@ public class LinkedListImp<T> implements LinkedList<T> {
 
         newNode.next = curNode.next;
         curNode.next = newNode;
+    }
+
+    public void deleteFirst() {
+        if (head == null) 
+            return;
+        head = head.next;
     }
 
     public void display() {

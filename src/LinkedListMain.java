@@ -9,10 +9,8 @@ public class LinkedListMain {
         integerList.addRear(56);
         integerList.addRear(30);
 
-        integerList.display();
-
         integerList.insertElement(45, 0);
-
+        integerList.deleteFirst();
         integerList.display();
     }
 }
