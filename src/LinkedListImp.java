@@ -1,4 +1,4 @@
-public class LinkedListImp<T extends Comparable> implements LinkedList<T> {
+public class LinkedListImp<T> implements LinkedList<T> {
     Node<T> head;
 
     LinkedListImp() {
@@ -6,13 +6,13 @@ public class LinkedListImp<T extends Comparable> implements LinkedList<T> {
     }
 
     public void addFront(T data) {
-        Node<T> newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
         newNode.next = head;
         head = newNode;
     }
 
     public void addRear(T data) {
-        Node<T> newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
         if (head == null) {
             head = newNode;
         } else {
@@ -30,7 +30,7 @@ public class LinkedListImp<T extends Comparable> implements LinkedList<T> {
             return;
         }
 
-        Node<T> newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
         Node<T> curNode = head;
 
         for (int prev = 0; prev < pos - 1; prev++) {
