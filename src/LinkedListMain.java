@@ -43,5 +43,14 @@ public class LinkedListMain {
         stack.display();
         stack.pop();
         stack.display();
+
+        Queue<Integer> queue = new Queue();
+        queue.enqueue(70);
+        queue.enqueue(30);
+        queue.enqueue(56);
+
+        queue.display();
+        queue.dequeue();
+        queue.display();
     }
 }
