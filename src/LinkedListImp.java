@@ -1,4 +1,4 @@
-public class LinkedListImp<T> implements LinkedList<T> {
+public class LinkedListImp<T extends Comparable> implements LinkedList<T> {
     Node<T> head;
 
     LinkedListImp() {
@@ -96,7 +96,7 @@ public class LinkedListImp<T> implements LinkedList<T> {
         if (pos == -1) {
             System.out.println("data does not exist");
             return;
-        } else if(pos == 0) {
+        } else if (pos == 0) {
             head = head.next;
         } else {
             for (int prev = 0; prev < pos - 1; prev++) {
